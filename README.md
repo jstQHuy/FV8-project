@@ -2,19 +2,19 @@
 
 ## 1.1 Environment & Requirements
 
-### ✅ Operating System
+### Operating System
 - Ubuntu 20.04 (recommended)
 
-### ✅ Software
+### Software
 - Docker
 - Python ≥ 3.10
 - Chromium (patched for FV8)
 
-### ✅ Hardware
+### Hardware
 - Disk space: > 50GB
 - RAM: ≥ 8GB
 
-### ✅ Dataset
+### Dataset
 - 90 malicious extensions (D2)
 - 100 benign extensions (D3)
 
@@ -22,7 +22,7 @@
 
 ## 1.2 Installation Steps
 
-### 🔹 Step 1: Clone the repository
+### Step 1: Clone the repository
 ```bash
 git clone https://github.com/wspr-ncsu/FV8.git
 cd FV8
