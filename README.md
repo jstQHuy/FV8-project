@@ -1,9 +1,9 @@
 #  FV8 Setup Guide
 
-## 📚 Contents
+## Contents
 - [1.1 Environment & Requirements](#11-environment--requirements)
 - [1.2 Installation Steps](#12-installation-steps)
-- [📌 Notes](#-notes)
+- [Notes](#-notes)
 
 ---
 
