@@ -1,5 +1,7 @@
 # FV8-project
-``python
+> Tương tự, ta cũng sẽ gửi "flag.txt" lên server thông qua UDP, nhưng mà sẽ gửi values của "flag.txt" dưới dạng bytes qua nc với payload `\x02\x08\x66\x6c\x61\x67\x2e\x74\x78\x74`
+
+```python
 ┌──(kali㉿kali)-[~/Desktop]
 └─$ echo -ne '\x02\x08\x66\x6c\x61\x67\x2e\x74\x78\x74'|nc -u chals.swampctf.com 44254
 swampCTF{r3v3r53_my_pr070_l1k3_m070_m070}
