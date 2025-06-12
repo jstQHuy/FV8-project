@@ -64,7 +64,41 @@ chromium-browser-stable --headless \
 python crawler_queue_tranco.py
 ```
 
+
+### Crawler Execution Flow
+
+To automate crawling hundreds of extensions across multiple URLs, FV8 uses two key components: a shell script (`queue.sh`) and a Python script (`crawler_queue.py`).
+
+####  `queue.sh`
+- Launches multiple `tmux` sessions in parallel.
+- Each session runs `crawler_queue.py` on a slice of the URL list.
+- Example loop:
+
+```bash
+for i in {0..11}
+do
+    tmux new-session -d -s queue-$i "python3 crawler_queue.py -i ALL_EXTENSIONS_D2 -s $i -e $((i+1))"
+done
+```
+
+####  `crawler_queue.py`
+- Reads extension folders from `INDIR` and maps them to URL targets.
+- Uses Chromium headless to run each extension on 12 URLs.
+- Applies `--js-flags='--no-lazy'` to force early execution of all scripts.
+- Logs are generated and sent to both MongoDB and PostgreSQL.
+
+Key logic (simplified):
+
+```python
+cmd = f"python3 ./scripts/vv8-cli.py crawl -pp Mfeatures --no-headless --show-chrome-log \
+  --disable-screenshot --disable-artifact-collection --disable-har --disable-gpu \
+  --disable-features=NetworkService --js-flags='--no-lazy' {flag_ext1} {flag_ext2} {timeout} -u {url} -o stdout"
+```
+
+This approach ensures scalable and reproducible forced execution of real-world extensions in an isolated and monitored environment.
+
 ---
+
 
 ## Notes
 
