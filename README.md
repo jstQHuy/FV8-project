@@ -3,7 +3,8 @@
 ## Contents
 - [1.1 Environment & Requirements](#11-environment--requirements)
 - [1.2 Installation Steps](#12-installation-steps)
-- [Notes](#-notes)
+- [Notes](#notes)
+- [Demo Video](#demo-video)
 
 ---
 
@@ -104,3 +105,9 @@ This approach ensures scalable and reproducible forced execution of real-world e
 
 - All logs are stored in **MongoDB** (`raw_logs`) and **PostgreSQL** (`logfile`, `mega_features`, `mega_usages`, etc.)
 - Use **Flower UI** at `localhost:5555` to monitor crawling jobs.
+
+---
+
+## Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/MyNGjmM5i_o/0.jpg)](https://www.youtube.com/watch?v=MyNGjmM5i_o)
