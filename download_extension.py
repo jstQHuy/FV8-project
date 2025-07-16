@@ -2,7 +2,7 @@ import os
 import requests
 import zipfile
 import io
-TXT_FILE = "list.txt"  # File .txt  compose extension IDchứa danh sách extension ID, mỗi dòng 1 ID
+TXT_FILE = "list.txt"  # File .txt  compose extension ID
 OUT_DIR = "../D2"  # File compose .crx and source compressed
 CHROME_VER = "122.0.6261.111"
 HEADERS = {
